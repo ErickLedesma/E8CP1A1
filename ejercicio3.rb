@@ -27,8 +27,7 @@ def count_word(file_name, word)
     data.each { |line| words << line.chomp.gsub('.','').gsub(':','').split(' ') }
     words.flatten!
     
-    t_word = words.select { |item| item == word}.size
-    # end 
+    t_word = words.count(word)
     puts t_word
 end 
 
